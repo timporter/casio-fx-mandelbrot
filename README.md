@@ -3,13 +3,19 @@ A Mandelbrot set explorer for Casio FX calculators
 
 ## What is it?
 
-This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for Casio programmable calculators. It draws the initial view of the complete set and allows for zooming and panning to explore the set in detail. Due to limitations of the device this is the strictly in/out of set monochrome version of the Mandelbrot set and not a fancy shaded one.
+This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for Casio programmable calculators. It draws the initial view of the complete set and allows for zooming and panning to explore the set in detail. Due to display limitations of the device this is the strictly in/out of set monochrome version of the Mandelbrot set and not a fancy shaded one.
 
-## How to use
+## Use
 
-Due to the serious limitations of both the hardware and programming language of the Casio FX series calculators please be aware that this is extremely slow to run. Be prepared for long waits.
+Due to the serious limitations of both the hardware and programming language of the Casio FX series calculators please be aware that this is extremely slow to run. Be prepared for long waits, at extreme view levels this can be over an hour.
 
-After entering the code and running it the initial view will be drawn, this takes about twenty minutes. You can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (same as keypad layout). Use the subtract symbol to zoom out. Any other key will force a re-draw and another long wait. Before each draw some parameters are briefly displayed.
+After entering the code and running it the initial view will be drawn, this takes about twenty minutes.
+
+Before each draw some parameters are briefly displayed (current screen position and accuracy level).
+
+### Controls
+
+After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (same as keypad layout). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
 
 While drawing a progress bar is drawn along the top of the screen, once the bar disappears the program is awaiting the next key press.
 
@@ -18,51 +24,77 @@ While drawing a progress bar is drawn along the top of the screen, once the bar 
 ### Notes on formatting
 
 You're going to have to type this in to the calculator in the program editor and save it.
+
 I've included some comments by some of the lines that you may wish to adjust, the comments don't need to be typed in (in fact, the Casio language doesn't support comments anyway so you can't)
+
 I've indented some of the lines to aid readability, like with comments there is no way to enter the indentation to the calculator.
+
 When starting a new line on the calculator the calculator will display the carriage return symbol (`↲`), this is ommitted in the code listing below.
 
 ### Built-in symbols and tokens used
 
 Calculator built-in function names MUST be typed by pressing the button for the relevant function, not just keying the whole thing with the alpha buttons.
 
-Here are the locations of the tokens used on an fx-9860GII
+Here are the locations of the tokens used on an FX-9860GII
 
 #### Symbols
 
 `→` = The assignment operator, bottom-right most of the dark keys
+
 `i` = Imaginary number symbol, NOT the I alpha character. Press SHIFT, 0. Or OPTN, F3 (CPLX), F1 (i)
 
 #### Maths
+
 `Abs` = Return absolute value of input. Press OPTN, F3 (CPLX), F2 (Abs)
 
 #### Conditionals
+
 `If` = Press SHIFT, PRGM (VARS), F1 (COM), F1 (If)
+
 `Then` = Press SHIFT, PRGM (VARS), F1 (COM), F2 (Then)
+
 `IfEnd` = Press SHIFT, PRGM (VARS), F1 (COM), F4 (I.End)
 
 #### Comparators
+
 `=` = Press SHIFT, '.'. Or SHIFT, PRGM (VARS), F6, F3 (REL), F1 (=)
+
 `>` = Press SHIFT, PRGM (VARS), F6, F3 (REL), F3 (>)
 
 #### For loops
+
 `For` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F1 (For)
+
 `To` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F2 (To)
+
 `Next` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F4 (Next)
 
 #### While loops
+
 `While` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F6, F1 (Whle)
+
 `WhileEnd` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F6, F2 (WEnd)
 
 #### Display
+
 `Cls` = Clear screen. Press SHIFT, F4 (SKTCH), F1 (Cls)
+
 `Locate` = Output text to specific location. Press SHIFT, PRGM (VARS), F6, F4 (I/O), F1 (Lcte)
+
 `PixelOn` = Turns given pixel on. Press SHIFT, F4 (SKTCH), F6, F6, F3 (PIXL), F1 (On)
+
 `PixelOff` = Turns given pixel off. Press SHIFT, F4 (SKTCH), F6, F6, F3 (PIXL), F2 (Off)
+
 `ViewWindow` = Configure view window. Press SHIFT, F3, F1
 
 #### Key input
+
 `GetKey` = Gives the key code of the lass keypress. Press SHIFT, PRGM (VARS), F6, F4 (I/O), F2 (Gtky)
+
+## Tested on
+
+Casio fx-9860GII
+Casio fx-9860GII SD (via emulator)
 
 ## Variables
 
