@@ -1,13 +1,13 @@
 # casio-fx-mandelbrot
-A Mandelbrot set explorer for Casio FX calculators
+A Mandelbrot set explorer for Casio FX Series programmable graphics calculators
 
 ## What is it?
 
-This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for Casio programmable calculators. It draws the initial view of the complete set and allows for zooming and panning to explore the set in detail. Due to display limitations of the device this is the strictly in/out of set monochrome version of the Mandelbrot set and not a fancy shaded one.
+This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for the FX Series of Casio programmable calculators. It draws the initial view of the complete set and unlike some other implementations online allows for zooming and panning to explore the set in detail. Due to having only a monochrome display this is strictly the in/out monochrome version of the Mandelbrot set and not a fancy shaded one.
 
 ## Use
 
-Due to the serious limitations of both the hardware and programming language of the Casio FX series calculators please be aware that this is extremely slow to run. Be prepared for long waits, at extreme view levels this can be over an hour.
+Due to the serious limitations of both the hardware and programming language of the Casio FX series calculators please be aware that this is extremely slow to run. Be prepared for long waits, at extreme zoom levels this can be over an hour.
 
 After entering the code and running it the initial view will be drawn, this takes about twenty minutes.
 
@@ -15,9 +15,11 @@ Before each draw some parameters are briefly displayed (current screen position 
 
 ### Controls
 
-After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (same as keypad layout). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
+After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (arranged the same as keypad layout, eg, 5 will zoom to the centre, 7 will zoom to the top left). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
 
-While drawing a progress bar is drawn along the top of the screen, once the bar disappears the program is awaiting the next key press.
+The in progress draw is rendered to the screen but while drawing is happening a progress bar is also displayed along the top, once the bar disappears the drawing is completed and the program is awaiting the next key press.
+
+Note that the 'busy' indicator (small square at top right of screen) will always be present even when the drawing has stopped and key press is being awaited.
 
 ## Code notes
 
@@ -35,7 +37,7 @@ When starting a new line on the calculator the calculator will display the carri
 
 Calculator built-in function names MUST be typed by pressing the button for the relevant function, not just keying the whole thing with the alpha buttons.
 
-Here are the locations of the tokens used on an FX-9860GII
+Here are the locations of the tokens used in the menu of an FX-9860GII , other models may have different locations.
 
 #### Symbols
 
