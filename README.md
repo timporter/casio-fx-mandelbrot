@@ -15,6 +15,10 @@ After entering the code and running it the initial view will be drawn, this take
 
 Before each draw some parameters are briefly displayed (current screen position and accuracy level).
 
+## Screenshots
+
+## Performance
+
 ### Controls
 
 After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (arranged the same as keypad layout, eg, 5 will zoom to the centre, 7 will zoom to the top left). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
