@@ -15,11 +15,23 @@ After entering the code and running it the initial view will be drawn, this take
 
 Before each draw some parameters are briefly displayed (current screen position and accuracy level).
 
-## Screenshots
-
 ## How does it work
 
+The Mandelbrot set is an infinite set of complex numbers that when an iterative formula is applied to them, do not tend to infinity. It is possible to visualise complex numbers on a cartesian map with the real part of the number plotted on the X axis and the imaginary part on the Y axis. Points on the map may be coloured according to if they are in or out of the set.
+
+For the precise details of the Mandelbrot equation itself I recommend the [WikiPedia article(https://en.wikipedia.org/wiki/Mandelbrot_set)
+
+The formula must be applied iteratively and after the result reaches beyond a value of 2 we know that it will escape to infinity. If the value is less than 2 then we don't know with certainty that the value is in the set or not, we must keep iterating to see if it will escape. Of course, we can't keep iterative forever and at some point must give up and decide that the point is in the set. How many times we iterate before giving up is the main factor that impacts performance. In this implmenetation I have set for 25 iterations for each pixel on the screen and I increase this number for additional accuracy as the image is zoomed in. 
+
+The implementation of the Mandelbrot equation itself is rather simple and would be cleaner if Casio offered a `break` function for their loops. Alas. I acheive breaking out of a loop by interfering with the loop counter. The reason this is needed is that if after a small number of iterations we are able to see that the value has gone above 2, and will now tend to infinity, then there is no need to waste CPU on the rest of the iterations.
+
 ## Performance
+
+The performance of this program is pretty bad.
+
+![Mandelbrot Set](/imgs/main.png)
+
+19min 20sec
 
 ### Controls
 
