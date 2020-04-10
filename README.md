@@ -41,55 +41,55 @@ Here are the locations of the tokens used on an FX-9860GII
 
 `→` = The assignment operator, bottom-right most of the dark keys
 
-`i` = Imaginary number symbol, NOT the I alpha character. Press SHIFT, 0. Or OPTN, F3 (CPLX), F1 (i)
+`i` = Imaginary number symbol, NOT the I alpha character. Press `SHIFT`, `0`. Or `OPTN`, `F3 (CPLX)`, `F1 (i)`
 
 #### Maths
 
-`Abs` = Return absolute value of input. Press OPTN, F3 (CPLX), F2 (Abs)
+`Abs` = Return absolute value of input. Press `OPTN`, `F3 (CPLX)`, `F2 (Abs)`
 
 #### Conditionals
 
-`If` = Press SHIFT, PRGM (VARS), F1 (COM), F1 (If)
+`If` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F1 (If)`
 
-`Then` = Press SHIFT, PRGM (VARS), F1 (COM), F2 (Then)
+`Then` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F2 (Then)`
 
-`IfEnd` = Press SHIFT, PRGM (VARS), F1 (COM), F4 (I.End)
+`IfEnd` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F4 (I.End)`
 
 #### Comparators
 
-`=` = Press SHIFT, '.'. Or SHIFT, PRGM (VARS), F6, F3 (REL), F1 (=)
+`=` = Press `SHIFT`, `.`. Or `SHIFT`, `PRGM (VARS)`, `F6`, `F3 (REL)`, `F1 (=)`
 
-`>` = Press SHIFT, PRGM (VARS), F6, F3 (REL), F3 (>)
+`>` = Press `SHIFT`, `PRGM (VARS)`, `F6`, `F3 (REL)`, `F3 (>)`
 
 #### For loops
 
-`For` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F1 (For)
+`For` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F1 (For)`
 
-`To` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F2 (To)
+`To` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F2 (To)`
 
-`Next` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F4 (Next)
+`Next` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F4 (Next)`
 
 #### While loops
 
-`While` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F6, F1 (Whle)
+`While` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F6`, `F1 (Whle)`
 
-`WhileEnd` = Press SHIFT, PRGM (VARS), F1 (COM), F6, F6, F2 (WEnd)
+`WhileEnd` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F6`, `F2 (WEnd)`
 
 #### Display
 
-`Cls` = Clear screen. Press SHIFT, F4 (SKTCH), F1 (Cls)
+`Cls` = Clear screen. Press `SHIFT`, `F4 (SKTCH)`, `F1 (Cls)`
 
-`Locate` = Output text to specific location. Press SHIFT, PRGM (VARS), F6, F4 (I/O), F1 (Lcte)
+`Locate` = Output text to specific location. Press `SHIFT`, `PRGM (VARS)`, `F6`, `F4 (I/O)`, `F1 (Lcte)`
 
-`PixelOn` = Turns given pixel on. Press SHIFT, F4 (SKTCH), F6, F6, F3 (PIXL), F1 (On)
+`PixelOn` = Turns given pixel on. Press `SHIFT`, `F4 (SKTCH)`, `F6`, `F6`, `F3 (PIXL)`, `F1 (On)`
 
-`PixelOff` = Turns given pixel off. Press SHIFT, F4 (SKTCH), F6, F6, F3 (PIXL), F2 (Off)
+`PixelOff` = Turns given pixel off. Press `SHIFT`, `F4 (SKTCH)`, `F6`, `F6`, `F3 (PIXL)`, `F2 (Off)`
 
-`ViewWindow` = Configure view window. Press SHIFT, F3, F1
+`ViewWindow` = Configure view window. Press `SHIFT`, `F3 (V.Win)`, `F1 (V.Win)`
 
 #### Key input
 
-`GetKey` = Gives the key code of the lass keypress. Press SHIFT, PRGM (VARS), F6, F4 (I/O), F2 (Gtky)
+`GetKey` = Gives the key code of the lass keypress. Press `SHIFT`, `PRGM (VARS)`, `F6`, `F4 (I/O)`, `F2 (Gtky)`
 
 ## Tested on
 
