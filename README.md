@@ -35,6 +35,13 @@ The in progress draw is rendered to the screen but while drawing is happening a 
 
 Note that the 'busy' indicator (small square at top right of screen) will always be present even when the drawing has stopped and key press is being awaited.
 
+## Tested on
+
+|Device|Notes|
+|------|-----|
+|Casio fx-9860GII|No issues|
+|Casio fx-9860GII SD (via emulator)|No issues|
+
 ## Performance
 
 The performance of this program is pretty bad. All performance times below are on a real-world (not emulated) fx-9860GII.
@@ -116,13 +123,6 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 #### Key input
 
 `GetKey` = Gives the key code of the lass keypress. Press `SHIFT`, `PRGM (VARS)`, `F6`, `F4 (I/O)`, `F2 (Gtky)`
-
-## Tested on
-
-|Device|Notes|
-|------|-----|
-|Casio fx-9860GII|No issues|
-|Casio fx-9860GII SD (via emulator)|No issues|
 
 ## Variables
 
