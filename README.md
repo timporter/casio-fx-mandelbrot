@@ -177,7 +177,7 @@ One rather annoying limitation of the Casio language is that variable names may 
 |W|Used for a sleep counter|
 |Z|Mandelbrot accumulator|
 
-I avoided using the X and Y variables despite the fact that this would have made it make more sense. Some drawing functions I was using in an earlier version of this code messed with those variables during internal operation.
+I avoided using the X and Y variables despite the fact that this would have made the code make more sense. Some drawing functions on the calculator change the X and Y variables as side effects.
 
 ## The code
 
