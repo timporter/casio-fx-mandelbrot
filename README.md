@@ -10,6 +10,8 @@ This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explore
 
 ![Mandelbrot Set](/imgs/main.png)
 
+![Mandelbrot Set](/imgs/5u.png)
+
 ## Use
 
 Due to the serious limitations of both the hardware and programming language of the Casio FX series calculators please be aware that each draw can take a very long time, at deep zoom levels this can be over an hour.
@@ -64,7 +66,8 @@ All performance times below are on a real-world (not emulated) fx-9860GII. Image
 |Location|Render time|Image|
 |--------|-----------|-----|
 |Initial view|19m 20s|![Mandelbrot Set](/imgs/main.png)|
-|From above, press 5 to zoom in the centre||![Mandelbrot Set](/imgs/5.png)|
+|From above, press `5` to zoom in the centre|1h 3m 10s|![Mandelbrot Set](/imgs/5.png)|
+|From above, press `↑` to pan up||![Mandelbrot Set](/imgs/5u.png)|
 
 ## Code notes
 
