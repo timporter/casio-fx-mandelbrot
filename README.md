@@ -176,7 +176,7 @@ While 1
 			
 			# This is where we decide if a point is in the Mandelbrot set or not
 			C+E×i→F   # i here is the imaginary number symbol, NOT the I alpha character. Press SHIFT, 0. Or OPTN, F3 (CPLX), F1 (i)
-			For 1→N to S
+			For 1→N To S
 				Z×Z+F→Z
 				If Abs Z>2  
 				Then
