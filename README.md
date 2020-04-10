@@ -19,7 +19,7 @@ Before each draw some parameters are briefly displayed (current screen position 
 
 The Mandelbrot set is an infinite set of complex numbers that when an iterative formula is applied to them, do not tend to infinity. It is possible to visualise complex numbers on a cartesian map with the real part of the number plotted on the X axis and the imaginary part on the Y axis. Points on the map may be coloured according to if they are in or out of the set.
 
-For the precise details of the Mandelbrot equation itself I recommend the [WikiPedia article(https://en.wikipedia.org/wiki/Mandelbrot_set)
+For the precise details of the Mandelbrot equation itself I recommend the [WikiPedia article](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
 The formula must be applied iteratively and after the result reaches beyond a value of 2 we know that it will escape to infinity. If the value is less than 2 then we don't know with certainty that the value is in the set or not, we must keep iterating to see if it will escape. Of course, we can't keep iterative forever and at some point must give up and decide that the point is in the set. How many times we iterate before giving up is the main factor that impacts performance. In this implmenetation I have set for 25 iterations for each pixel on the screen and I increase this number for additional accuracy as the image is zoomed in. 
 
