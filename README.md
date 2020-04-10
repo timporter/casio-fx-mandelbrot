@@ -17,6 +17,8 @@ Before each draw some parameters are briefly displayed (current screen position 
 
 ## Screenshots
 
+## How does it work
+
 ## Performance
 
 ### Controls
