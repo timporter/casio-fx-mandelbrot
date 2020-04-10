@@ -46,7 +46,7 @@ If you test this on additional devices please let me know if it works or not, vi
 
 ## Performance
 
-The performance of this program is pretty bad. All performance times below are on a real-world (not emulated) fx-9860GII.
+The performance of this program is pretty bad. All performance times below are on a real-world (not emulated) fx-9860GII. Images are extracted from the emulator.
 
 |Location|Render time|Image|
 |--------|-----------|-----|
