@@ -217,9 +217,9 @@ While 1
 	Next
 	
 	# Wait for a keypress
-	0->K
+	0→K
 	While K=0
-		GetKey->K
+		GetKey→K
 	WhileEnd
 	
 	# Deal with any presses to the D-pad to scroll around the screen
