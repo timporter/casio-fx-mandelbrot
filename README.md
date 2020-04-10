@@ -1,9 +1,10 @@
 # casio-fx-mandelbrot
-A Mandelbrot set explorer for Casio FX Series programmable graphics calculators
+
+A Mandelbrot set explorer for Casio FX Series programmable graphics calculators. Initial inspiration from [Luke Wakeling](http://www.users.globalnet.co.uk/~waking/luke/mathsoc/h10/mandelbrot.htm) with several issues fixed and features added.
 
 ## What is it?
 
-This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for the FX Series of Casio programmable calculators. It draws the initial view of the complete set and unlike some other implementations online allows for zooming and panning to explore the set in detail. Due to having only a monochrome display this is strictly the in/out monochrome version of the Mandelbrot set and not a fancy shaded one.
+This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for the FX Series of Casio programmable calculators. It draws the initial view of the complete set and then allows for zooming and panning to explore the set in detail. Due to having only a monochrome display this is strictly the in/out monochrome version of the Mandelbrot set and not a fancy shaded one.
 
 ## Screenshots
 
@@ -23,9 +24,11 @@ The Mandelbrot set is an infinite set of complex numbers that when an iterative 
 
 For the precise details of the Mandelbrot equation itself I recommend the [WikiPedia article](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
-The formula must be applied iteratively and after the result reaches beyond a value of 2 we know that it will escape to infinity. If the value is less than 2 then we don't know with certainty that the value is in the set or not, we must keep iterating to see if it will escape. Of course, we can't keep iterative forever and at some point must give up and decide that the point is in the set. How many times we iterate before giving up is the main factor that impacts performance. In this implmenetation I have set for 25 iterations for each pixel on the screen and I increase this number for additional accuracy as the image is zoomed in. 
+The formula must be applied iteratively and after the result reaches beyond a value of 2 we know that it will escape to infinity. If the value is less than 2 then we don't know with certainty that the value is in the set or not, we must keep iterating to see if it will escape. Of course, we can't keep iterative forever and at some point must give up and decide that the point is in the set. How many times we iterate before giving up is the main factor that impacts performance. In this implmenetation I have chosed 25 iterations for each point tested and I increase this number for additional accuracy as the image is zoomed in. 
 
-The implementation of the Mandelbrot equation itself is rather simple and would be cleaner if Casio offered a `break` function for their loops. Alas. I acheive breaking out of a loop by interfering with the loop counter. The reason this is needed is that if after a small number of iterations we are able to see that the value has gone above 2, and will now tend to infinity, then there is no need to waste CPU on the rest of the iterations.
+The process is repeated for each pixel on the screen having been mapped to a corresponding coordinate / complex number.
+
+The implementation of the Mandelbrot equation itself is rather simple and would be cleaner still if Casio offered a `break` function for their loops. Alas. Breaking out of the loop is achieved by interfering with the loop counter. The reason this is needed is that if after a small number of iterations we are able to see that the value has gone above 2, and will now tend to infinity, then there is no need to waste CPU on the rest of the iterations.
 
 ## Controls
 
