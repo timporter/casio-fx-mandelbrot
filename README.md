@@ -53,7 +53,11 @@ The Mandelbrot specific code itself is the most indented part of the code and ca
 
 ## Performance and accuracy
 
-The performance of code depends highly on the ammount of accuracy required to draw each image, the accuracy is determined by the cap on the number of iterations performed for each point. See about half way down [Renato Fonsecas Mandelbrot Page](http://renatofonseca.net/mandelbrotset.php) for examples of the difference this makes. In this implementation I draw the initial view with a cap of 25 iterations, and increase this cap by 5 each time a zoom is performed (or -5 when zooming out). This is the `S` value in the code which you can easily adjust downwards for increased performance.
+The performance of code depends highly on the ammount of accuracy required to draw each image, the accuracy is determined by the cap on the number of iterations performed for each point. See about half way down [Renato Fonsecas Mandelbrot Page](http://renatofonseca.net/mandelbrotset.php) for examples of the difference this makes. In this implementation I draw the initial view with a cap of 25 iterations, and increase this cap by 5 each time a zoom is performed (or -5 when zooming out).
+
+Due to this, in general, each image will take longer to draw the further you zoom in. However, due to the fact that the main loop escapes early for light sections and dark sections require the full max iteration count, the draw time will be significantly faster where there is more light space than dark, such as around the edges of the main pattern rather than the middle.
+
+The accuracy is stored in the `S` value in the code which you can easily adjust downwards for increased performance (you'll also have to adjust where it is incremented and decremented in the zoom logic).
 
 All performance times below are on a real-world (not emulated) fx-9860GII. Images however are extracted from the emulator.
 
