@@ -12,8 +12,6 @@ This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explore
 
 ![Mandelbrot Set](/imgs/5uu.png)
 
-![Mandelbrot Set](/imgs/5uuu3.png)
-
 ![Mandelbrot Set](/imgs/5uuu372.png)
 
 ## Use
