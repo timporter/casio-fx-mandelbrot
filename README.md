@@ -104,24 +104,43 @@ Casio fx-9860GII SD (via emulator)
 ## Variables
 
 A  Current pixel column being drawn
+
 B  Bottom of view range
+
 C  Adjusted coordinate of current column
+
 D  Current pixel row being drawn
+
 E  Adjusted coordinate of current row
+
 F  Mandelbrot initial coordinate
+
 I  Calculated pixel size (width)
+
 J  Calculated pixel size (height)
+
 K  Last key press
+
 L  Left of view range
+
 M  Screen width in pixels
+
 N  Mandelbrot iteration counter
+
 O  Screen height in pixels
+
 P  Reserved - Used when calculating new view ranges (width)
+
 Q  Reserved - Used when calculating new view ranges (height)
+
 R  Right of view range
+
 S  Cap on iterations of mandelbrot formula
+
 T  Top of view range
+
 W  Reserved - Used for a sleep counter
+
 Z  Mandelbrot accumulator
 
 
