@@ -5,6 +5,8 @@ A Mandelbrot set explorer for Casio FX Series programmable graphics calculators
 
 This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for the FX Series of Casio programmable calculators. It draws the initial view of the complete set and unlike some other implementations online allows for zooming and panning to explore the set in detail. Due to having only a monochrome display this is strictly the in/out monochrome version of the Mandelbrot set and not a fancy shaded one.
 
+## Screenshots
+
 ![Mandelbrot Set](/imgs/main.png)
 
 ## Use
@@ -25,21 +27,23 @@ The formula must be applied iteratively and after the result reaches beyond a va
 
 The implementation of the Mandelbrot equation itself is rather simple and would be cleaner if Casio offered a `break` function for their loops. Alas. I acheive breaking out of a loop by interfering with the loop counter. The reason this is needed is that if after a small number of iterations we are able to see that the value has gone above 2, and will now tend to infinity, then there is no need to waste CPU on the rest of the iterations.
 
-## Performance
-
-The performance of this program is pretty bad.
-
-![Mandelbrot Set](/imgs/main.png)
-
-19min 20sec
-
-### Controls
+## Controls
 
 After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (arranged the same as keypad layout, eg, 5 will zoom to the centre, 7 will zoom to the top left). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
 
 The in progress draw is rendered to the screen but while drawing is happening a progress bar is also displayed along the top, once the bar disappears the drawing is completed and the program is awaiting the next key press.
 
 Note that the 'busy' indicator (small square at top right of screen) will always be present even when the drawing has stopped and key press is being awaited.
+
+## Performance
+
+The performance of this program is pretty bad.
+
+|Location|Render time|Image|
+|--------|-----------|-----|
+|Initial view|19m 20s|![Mandelbrot Set](/imgs/main.png)|
+
+19min 20sec
 
 ## Code notes
 
