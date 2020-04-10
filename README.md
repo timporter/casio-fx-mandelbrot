@@ -206,7 +206,7 @@ While 1
 			
 		Next
 		
-		# Draw a progress bar
+		# Draw/update the progress bar
 		PixelOn 1,A
 		
 	Next
