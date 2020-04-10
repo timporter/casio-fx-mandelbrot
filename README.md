@@ -4,7 +4,7 @@ A Mandelbrot set explorer for Casio FX Series programmable graphics calculators.
 
 ## What is it?
 
-This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for the FX Series of Casio programmable calculators. It draws the initial view of the complete set and then allows for zooming and panning to explore the set in detail. Due to having only a monochrome display this is strictly the in/out monochrome version of the Mandelbrot set and not a fancy shaded one. It is also extremely slow, the project exists mostly for fun.
+This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explorer for the FX Series of Casio programmable calculators. It draws the initial view of the complete set and then allows for zooming and panning to explore the set in detail. Due to having only a monochrome display this is strictly the in/out monochrome version of the Mandelbrot set and not a fancy shaded one. It is also extremely slow, the project exists mostly as a fun exploration of what is possible with these calculators.
 
 ## Screenshots
 
@@ -12,44 +12,50 @@ This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explore
 
 ## Use
 
-Due to the serious limitations of both the hardware and programming language of the Casio FX series calculators please be aware that this is extremely slow to run. Be prepared for long waits, at extreme zoom levels this can be over an hour.
+Due to the serious limitations of both the hardware and programming language of the Casio FX series calculators please be aware that each draw can take a very long time, at deep zoom levels this can be over an hour.
 
-After entering the code and running it the initial view will be drawn, this takes about twenty minutes.
+After entering the code and running it the initial view will be drawn, this takes about twenty minutes. You can then zoom in/out and pan around.
 
-Before each draw some parameters are briefly displayed (current screen position and accuracy level).
+Before each draw some parameters are briefly displayed (current screen position and accuracy level `S`).
 
-## How does it work
+### Controls
 
-The Mandelbrot set is an infinite set of complex numbers that when an iterative formula is applied to them, do not tend to infinity. It is possible to visualise complex numbers on a cartesian map with the real part of the number plotted on the X axis and the imaginary part on the Y axis. Points on the map may be coloured according to if they are in or out of the set.
+After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (arranged the same as keypad layout, eg, 5 will zoom to the centre, 2 will zoom to the bottom part and 7 will zoom to the top left). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
 
-For the precise details of the Mandelbrot equation itself I recommend the [WikiPedia article](https://en.wikipedia.org/wiki/Mandelbrot_set)
-
-The formula must be applied iteratively and after the result reaches beyond a value of 2 we know that it will escape to infinity. If the value is less than 2 then we don't know with certainty that the value is in the set or not, we must keep iterating to see if it will escape. Of course, we can't keep iterative forever and at some point must give up and decide that the point is in the set. How many times we iterate before giving up is the main factor that impacts performance. In this implmenetation I have chosed 25 iterations for each point tested and I increase this number for additional accuracy as the image is zoomed in. 
-
-The process is repeated for each pixel on the screen having been mapped to a corresponding coordinate / complex number.
-
-The implementation of the Mandelbrot equation itself is rather simple and would be cleaner still if Casio offered a `break` function for their loops. Alas. Breaking out of the loop is achieved by interfering with the loop counter. The reason this is needed is that if after a small number of iterations we are able to see that the value has gone above 2, and will now tend to infinity, then there is no need to waste CPU on the rest of the iterations.
-
-## Controls
-
-After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (arranged the same as keypad layout, eg, 5 will zoom to the centre, 7 will zoom to the top left). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
-
-The in progress draw is rendered to the screen but while drawing is happening a progress bar is also displayed along the top, once the bar disappears the drawing is completed and the program is awaiting the next key press.
+The image is rendered to the screen as it is processed but in addition a progress bar is displayed along the top, once the bar disappears the drawing is completed and the program is awaiting the next key press.
 
 Note that the 'busy' indicator (small square at top right of screen) will always be present even when the drawing has stopped and key press is being awaited.
 
 ## Tested on
 
-If you test this on additional devices please let me know if it works or not, via issue or PR to this document. If different model calculators have different size screens the most likely issue is that you are going to get an `AgumentError` when the code tries to plot outside the screen range, adjust the `M` and `O` values near the start of the code to account for this.
+If you test this on additional devices please let me know if it works or not, via GitHub issue or PR to this document. If different model calculators have different size screens the most likely issue is that you are going to get an `AgumentError` when the code tries to plot outside the screen range, adjust the `M` and `O` values near the start of the code to account for this.
 
 |Device|Notes|
 |------|-----|
 |Casio fx-9860GII|No issues|
 |Casio fx-9860GII SD (via emulator)|No issues|
 
-## Performance
+## How does it work
 
-The performance of this program is pretty bad. All performance times below are on a real-world (not emulated) fx-9860GII. Images are extracted from the emulator.
+The Mandelbrot set is an infinite set of complex numbers that when a specific iterative function is applied to them, do not tend to infinity.
+
+For the precise details of the Mandelbrot function itself I recommend the [WikiPedia article](https://en.wikipedia.org/wiki/Mandelbrot_set)
+
+It is possible to visualise complex numbers on a cartesian map with the real part of the number plotted on the X axis and the imaginary part on the Y axis. Points on the map may be coloured according to if they are in or out of the set.
+
+The formula must be applied iteratively and after the result reaches beyond a value of 2 we know that it will escape to infinity. If the value is less than 2 then we don't know with certainty that the value is in the set or not, we must keep iterating to see if it will escape. Of course, we can't keep iterating forever and at some point must give up and decide that the point is in the set. How many times we iterate before giving up is the main factor that impacts performance. In this implmenetation I have chosen 25 iterations for each point tested and I increase this number for additional accuracy as the image is zoomed in. 
+
+The process is repeated for each pixel on the screen having been mapped to a corresponding coordinate / complex number.
+
+The implementation of the Mandelbrot equation itself is rather simple and would be cleaner still if Casio offered a `break` function for their loops. Alas. Breaking out of the loop is achieved by interfering with the loop counter. The reason this is needed is that if after a small number of iterations we are able to see that the value has gone above 2, and will now tend to infinity, then there is no need to waste CPU on the rest of the iterations.
+
+The Mandelbrot specific code itself is the most indented part of the code and can be found around 1/3 of the way through. Most of the rest of the code deals with panning and zooming about, adjusting screen coordinates, etc.
+
+## Performance and accuracy
+
+The performance of code depends highly on the ammount of accuracy required to draw each image, the accuracy is determined by the cap on the number of iterations performed for each point. See about half way down [Renato Fonsecas Mandelbrot Page](http://renatofonseca.net/mandelbrotset.php) for examples of the difference this makes. In this implementation I draw the initial view with a cap of 25 iterations, and increase this cap by 5 each time a zoom is performed (or -5 when zooming out). This is the `S` value in the code which you can easily adjust downwards for increased performance.
+
+All performance times below are on a real-world (not emulated) fx-9860GII. Images however are extracted from the emulator.
 
 |Location|Render time|Image|
 |--------|-----------|-----|
