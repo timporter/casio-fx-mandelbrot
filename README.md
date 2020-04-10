@@ -94,6 +94,7 @@ Here are the locations of the tokens used on an FX-9860GII
 ## Tested on
 
 Casio fx-9860GII
+
 Casio fx-9860GII SD (via emulator)
 
 ## Variables
