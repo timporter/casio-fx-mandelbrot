@@ -153,14 +153,15 @@ One rather annoying limitation of the Casio language is that variable names may 
 |M|Screen width in pixels|
 |N|Mandelbrot iteration counter|
 |O|Screen height in pixels|
-|P|Reserved - Used when calculating new view ranges (width)|
-|Q|Reserved - Used when calculating new view ranges (height)|
+|P|Used when calculating new view ranges, a fraction of the current width|
+|Q|Used when calculating new view ranges, a fraction of the current height|
 |R|Right of view range|
 |S|Cap on iterations of mandelbrot formula|
 |T|Top of view range|
-|W|Reserved - Used for a sleep counter|
+|W|Used for a sleep counter|
 |Z|Mandelbrot accumulator|
 
+I avoided using the X and Y variables despite the fact that this would have made it make more sense. Some drawing functions I was using in an earlier version of this code messed with those variables during internal operation.
 
 ## The code
 
