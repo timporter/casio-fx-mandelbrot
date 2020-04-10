@@ -82,7 +82,7 @@ All performance times below are on a real-world (not emulated) fx-9860GII. Image
 |From above, press `6` to zoom in to middle right||![Mandelbrot Set](/imgs/5uuu3728l6.png)|
 |From above, press `4` to zoom in to middle left||![Mandelbrot Set](/imgs/5uuu3728l64.png)|
 
-## Code notes
+## Code
 
 ### Notes on formatting
 
@@ -154,7 +154,7 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 
 `GetKey` = Gives the key code of the lass keypress. Press `SHIFT`, `PRGM (VARS)`, `F6`, `F4 (I/O)`, `F2 (Gtky)`
 
-## Variables
+### Variables
 
 One rather annoying limitation of the Casio language is that variable names may only be a single character long. Here is what they all mean.
 
@@ -183,7 +183,7 @@ One rather annoying limitation of the Casio language is that variable names may 
 
 I avoided using the X and Y variables despite the fact that this would have made the code make more sense. Some drawing functions on the calculator change the X and Y variables as side effects.
 
-## The code
+### Source
 
 ```
 ViewWindow 10,100,0,10,100,0    # Sets the view to any area that won't have main axis in it
