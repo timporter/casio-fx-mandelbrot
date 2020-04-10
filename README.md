@@ -138,7 +138,8 @@ ViewWindow 10,100,0,10,100,0    # Sets the view to any area that won't have main
 1→T
 -1→B
 
-# Set (M,N) to one less than the resolution in pixels of the main display of your calculator model (almost certainly 128x64)
+# Set (M,N) to one less than the resolution in pixels of the main display
+# of your calculator model (almost certainly 128x64)
 127→M 
 63→O 
 
@@ -148,7 +149,8 @@ While 1
 	Cls
   
   # Display the current view coordinates on the screen briefly before drawing
-	Locate 1,1,"T=                   "   # 19 Spaces (Press SHIFT, A-Lock (ALPHA), and then 19 times press SPACE (.))
+  	# 19 Spaces after the = sign (Press SHIFT, A-Lock (ALPHA), and then 19 times press SPACE (.))
+	Locate 1,1,"T=                   "
 	Locate 3,1,T
 	Locale 1,2,"B=                   "
 	Locate 3,2,B
@@ -177,12 +179,15 @@ While 1
 			0→Z
 			
 			# This is where we decide if a point is in the Mandelbrot set or not
-			C+E×i→F   # i here is the imaginary number symbol, NOT the I alpha character. Press SHIFT, 0. Or OPTN, F3 (CPLX), F1 (i)
+			# On the line below 'i' is the imaginary number symbol, NOT the I alpha character.
+			# Press SHIFT, 0. Or OPTN, F3 (CPLX), F1 (i)
+			C+E×i→F
 			For 1→N To S
 				Z×Z+F→Z
 				If Abs Z>2  
 				Then
-					# The point isn't in the set (theres no neat way to break out of a loop so set N as though the loop went too far)
+					# The point isn't in the set so we can break out of this loop
+					# Sadly theres no 'break' command so set N as though the loop went too far
 					S+1→N
 				IfEnd
 			Next
