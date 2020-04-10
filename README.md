@@ -119,9 +119,10 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 
 ## Tested on
 
-Casio fx-9860GII
-
-Casio fx-9860GII SD (via emulator)
+|Device|Notes|
+|------|-----|
+|Casio fx-9860GII|No issues|
+|Casio fx-9860GII SD (via emulator)|No issues|
 
 ## Variables
 
