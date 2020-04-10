@@ -37,7 +37,7 @@ Note that the 'busy' indicator (small square at top right of screen) will always
 
 ## Performance
 
-The performance of this program is pretty bad.
+The performance of this program is pretty bad. All performance times below are on a real-world (not emulated) fx-9860GII.
 
 |Location|Render time|Image|
 |--------|-----------|-----|
