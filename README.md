@@ -14,6 +14,8 @@ This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explore
 
 ![Mandelbrot Set](/imgs/5uuu372.png)
 
+![Mandelbrot Set](/imgs/5uuu3728l644189.png)
+
 ## Use
 
 Due to the serious limitations of both the hardware and programming language of the Casio FX series calculators please be aware that each draw can take a very long time, at deep zoom levels this can be over an hour.
