@@ -74,7 +74,7 @@ All performance times below are on a real-world (not emulated) fx-9860GII. Image
 |From above, press `↑` to pan up<br>Note: Faster render due to less dark area|53m 34s|![Mandelbrot Set](/imgs/5u.png)|
 |From above, press `↑` to pan up again<br>Note: Faster render due to less dark area|31m 37s|![Mandelbrot Set](/imgs/5uu.png)|
 |From above, press `↑` to pan up again<br>Note: Faster render due to less dark area|13m 50s|![Mandelbrot Set](/imgs/5uuu.png)|
-|From above, press `3` to zoom in to bottom right||![Mandelbrot Set](/imgs/5uuu3.png)|
+|From above, press `3` to zoom in to bottom right|44m 27s|![Mandelbrot Set](/imgs/5uuu3.png)|
 |From above, press `7` to zoom in to top left||![Mandelbrot Set](/imgs/5uuu37.png)|
 |From above, press `2` to zoom in to bottom middle||![Mandelbrot Set](/imgs/5uuu372.png)|
 |From above, press `8` to zoom in to top middle||![Mandelbrot Set](/imgs/5uuu3728.png)|
