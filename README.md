@@ -37,13 +37,13 @@ If you test this on additional devices please let me know if it works or not, vi
 
 ## How does it work
 
-The Mandelbrot set is an infinite set of complex numbers that when a specific iterative function is applied to them, do not tend to infinity.
+The Mandelbrot set is a set of complex numbers defined as the subset of all complex numbers having the property that when a specific iterative function is applied to them, do not tend to infinity.
 
 For the precise details of the Mandelbrot function itself I recommend the [WikiPedia article](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
 It is possible to visualise complex numbers on a cartesian map with the real part of the number plotted on the X axis and the imaginary part on the Y axis. Points on the map may be coloured according to if they are in or out of the set.
 
-The formula must be applied iteratively and after the result reaches beyond a value of 2 we know that it will escape to infinity. If the value is less than 2 then we don't know with certainty that the value is in the set or not, we must keep iterating to see if it will escape. Of course, we can't keep iterating forever and at some point must give up and decide that the point is in the set. How many times we iterate before giving up is the main factor that impacts performance. In this implmenetation I have chosen 25 iterations for each point tested and I increase this number for additional accuracy as the image is zoomed in. 
+The formula must be applied iteratively and after the result reaches beyond a value of 2 we know that it will escape to infinity. If the value is less than 2 then we don't know with certainty that the value is in the set or not, we must keep iterating to see if it will escape. Of course, we can't keep iterating forever and at some point must give up and decide that the point is in the set. How many times we iterate before giving up is the main factor that impacts performance and accuracy. In this implementation I have chosen 25 iterations for each point tested and I increase this number by 5 for additional accuracy as the image is zoomed in. 
 
 The process is repeated for each pixel on the screen having been mapped to a corresponding coordinate / complex number.
 
@@ -135,6 +135,8 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 `GetKey` = Gives the key code of the lass keypress. Press `SHIFT`, `PRGM (VARS)`, `F6`, `F4 (I/O)`, `F2 (Gtky)`
 
 ## Variables
+
+One rather annoying limitation of the Casio language is that variable names may only be a single character long. Here is what they all mean.
 
 |Letter|Meaning|
 |------|-------|
