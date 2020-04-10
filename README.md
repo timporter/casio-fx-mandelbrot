@@ -247,7 +247,7 @@ While 1
 	IfEnd
 	
 	# Deal with any presses to the number pad to zoom to sections of the screen
-	# When zooming in also increase the S value which increase accuracy (number of iterations for main calculation)
+	# When zooming in also increase the S value which increases accuracy
 	(T-B)÷3→Q
 	(R-L)÷3→P
 	If K=72  # 1, down left
