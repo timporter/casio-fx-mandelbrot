@@ -51,6 +51,7 @@ The performance of this program is pretty bad. All performance times below are o
 |Location|Render time|Image|
 |--------|-----------|-----|
 |Initial view|19m 20s|![Mandelbrot Set](/imgs/main.png)|
+|From above, press 5 to zoom in the centre||![Mandelbrot Set](/imgs/5.png)|
 
 19min 20sec
 
