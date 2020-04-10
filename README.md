@@ -1,7 +1,9 @@
 # casio-fx-mandelbrot
 A Mandelbrot set explorer for Casio FX Series programmable graphics calculators
 
-![Mandelbrot Set](/imgs/main.png)*Mandelbrot Set*
+![Mandelbrot Set](/imgs/main.png)
+
+*Mandelbrot Set*
 
 ## What is it?
 
