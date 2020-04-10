@@ -81,6 +81,7 @@ All performance times below are on a real-world (not emulated) fx-9860GII. Image
 |From above, press `←` to pan left||![Mandelbrot Set](/imgs/5uuu3728l.png)|
 |From above, press `6` to zoom in to middle right||![Mandelbrot Set](/imgs/5uuu3728l6.png)|
 |From above, press `4` to zoom in to middle left||![Mandelbrot Set](/imgs/5uuu3728l64.png)|
+|From above, press `4` to zoom in to middle left||![Mandelbrot Set](/imgs/5uuu3728l644.png)|
 
 ## Code
 
