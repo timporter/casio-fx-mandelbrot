@@ -63,6 +63,8 @@ Due to this, in general, each image will take longer to draw the further you zoo
 
 The accuracy is stored in the `S` value in the code which you can easily adjust downwards for increased performance (you'll also have to adjust where it is incremented and decremented in the zoom logic).
 
+## Demo
+
 All performance times below are on a real-world (not emulated) fx-9860GII. Images however are extracted from the emulator.
 
 |Location|Render time|Image|
