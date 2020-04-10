@@ -10,7 +10,7 @@ This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explore
 
 ![Mandelbrot Set](/imgs/main.png)
 
-![Mandelbrot Set](/imgs/5u.png)
+![Mandelbrot Set](/imgs/5uu.png)
 
 ## Use
 
