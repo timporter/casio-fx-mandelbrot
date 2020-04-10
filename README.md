@@ -8,13 +8,8 @@ This is a [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set) explore
 
 ## Screenshots
 
-![Mandelbrot Set](/imgs/main.png)
-
-![Mandelbrot Set](/imgs/5uu.png)
-
-![Mandelbrot Set](/imgs/5uuu372.png)
-
-![Mandelbrot Set](/imgs/5uuu3728l644189.png)
+![Mandelbrot Set](/imgs/main.png) ![Mandelbrot Set](/imgs/5uu.png)
+![Mandelbrot Set](/imgs/5uuu372.png) ![Mandelbrot Set](/imgs/5uuu3728l64418.png)
 
 ## Use
 
