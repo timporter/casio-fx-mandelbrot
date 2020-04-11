@@ -21,11 +21,16 @@ Before each draw some parameters are briefly displayed (current screen position 
 
 ### Controls
 
-After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (arranged the same as keypad layout, eg, 5 will zoom to the centre, 2 will zoom to the bottom part and 7 will zoom to the top left). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
-
-The image is rendered to the screen as it is processed but in addition a progress bar is displayed along the top, once the bar disappears the drawing is completed and the program is awaiting the next key press.
+For each draw the screenis blanked and the image is rendered to the screen as it is processed. Additionally, the top row of pixes is shaded in like a progress bar as drawing progresses left to right over the screen. This is useful to indicate progress if there is otherwise nothing being drawn in that part of the screen. After the draw is complete the progress bar is removed and the program is awaiting the next key press.
 
 Note that the 'busy' indicator (small square at top right of screen) will always be present even when the drawing has stopped and key press is being awaited.
+
+|Key|Operation|
+|---|---------|
+|D-pad|Pan left/right/up/down|
+|`7` `8` `9`<br>`4` `5` `6`<br>`1` `2` `3`|Zoom into the corresponding section of the screen, arranged the same as keypad layout.<br>eg, 5 will zoom to the centre, 2 will zoom to the bottom middle and 7 will zoom to the top left)|
+|`-` (subtract)|Zoom out|
+|Any other key|Force a re-draw of the current location.|
 
 ## Tested on
 
@@ -33,6 +38,7 @@ Note that the 'busy' indicator (small square at top right of screen) will always
 |------|-----|
 |Casio fx-9860GII|No issues|
 |Casio fx-9860GII SD (via emulator)|No issues|
+|Casio fx-9750GII (via emulator)|No issues|
 
 If you test this on additional devices please let me know if it works or not, via GitHub issue or PR to this document. If different model calculators have different size screens the most likely issue is that you are going to get an `AgumentError` when the code tries to plot outside the screen range, adjust the `M` and `O` values near the start of the code to account for this.
 
@@ -78,10 +84,10 @@ All performance times below are on a real-world (not emulated) fx-9860GII. Image
 |From above, press `←` to pan left|49m 20s|![Mandelbrot Set](/imgs/5uuu3728l.png)|
 |From above, press `6` to zoom in to the middle right|49m 14s|![Mandelbrot Set](/imgs/5uuu3728l6.png)|
 |From above, press `4` to zoom in to the middle left|46m 52s|![Mandelbrot Set](/imgs/5uuu3728l64.png)|
-|From above, press `4` to zoom in to the middle left||![Mandelbrot Set](/imgs/5uuu3728l644.png)|
-|From above, press `1` to zoom in to the bottom left||![Mandelbrot Set](/imgs/5uuu3728l6441.png)|
-|From above, press `8` to zoom in to the top middle||![Mandelbrot Set](/imgs/5uuu3728l64418.png)|
-|From above, press `9` to zoom in to the top right||![Mandelbrot Set](/imgs/5uuu3728l644189.png)|
+|From above, press `4` to zoom in to the middle left|1h 9m 50s|![Mandelbrot Set](/imgs/5uuu3728l644.png)|
+|From above, press `1` to zoom in to the bottom left|~1h 20m|![Mandelbrot Set](/imgs/5uuu3728l6441.png)|
+|From above, press `8` to zoom in to the top middle|1h 57m 12s|![Mandelbrot Set](/imgs/5uuu3728l64418.png)|
+|From above, press `9` to zoom in to the top right|~2h 10m|![Mandelbrot Set](/imgs/5uuu3728l644189.png)|
 |From above, press `5` to zoom in to the centre||![Mandelbrot Set](/imgs/5uuu3728l6441895.png)|
 
 ## Code
@@ -158,7 +164,7 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 
 ### Variables
 
-One rather annoying limitation of the Casio language is that variable names may only be a single character long. Here is what they all mean.
+One annoying limitation of the Casio language is that variable names can only be a single character long. Here is what they all mean.
 
 |Letter|Meaning|
 |------|-------|
@@ -239,7 +245,7 @@ While 1
 			# This is where we decide if a point is in the Mandelbrot set or not
 			# On the line below 'i' is the imaginary number symbol, NOT the I alpha character.
 			# Press SHIFT, 0. Or OPTN, F3 (CPLX), F1 (i)
-			C+E×i→F
+			C+E×i→F  # READ COMMENT ABOVE
 			For 1→N To S
 				Z×Z+F→Z
 				If Abs Z>2  
