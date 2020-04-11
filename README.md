@@ -21,11 +21,16 @@ Before each draw some parameters are briefly displayed (current screen position 
 
 ### Controls
 
-After a draw is complete you can then pan around with the D-Pad, or use the numbers 1-9 to zoom into the corresponding section of the screen (arranged the same as keypad layout, eg, 5 will zoom to the centre, 2 will zoom to the bottom part and 7 will zoom to the top left). Use the subtract symbol to zoom out. Any other key will force a re-draw of the current location.
-
-The image is rendered to the screen as it is processed but in addition a progress bar is displayed along the top, once the bar disappears the drawing is completed and the program is awaiting the next key press.
+For each draw the screenis blanked and the image is rendered to the screen as it is processed. Additionally, the top row of pixes is shaded in like a progress bar as drawing progresses left to right over the screen. This is useful to indicate progress if there is otherwise nothing being drawn in that part of the screen. After the draw is complete the progress bar is removed and the program is awaiting the next key press.
 
 Note that the 'busy' indicator (small square at top right of screen) will always be present even when the drawing has stopped and key press is being awaited.
+
+|Key|Operation|
+|---|---------|
+|D-pad|Pan left/right/up/down|
+|1-9|Zoom into the corresponding section of the screen (arranged the same as keypad layout, eg, 5 will zoom to the centre, 2 will zoom to the bottom part and 7 will zoom to the top left)|
+|`-` (subtract)|Zoom out|
+|Any other key|Force a re-draw of the current location.|
 
 ## Tested on
 
