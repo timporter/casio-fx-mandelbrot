@@ -158,7 +158,7 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 
 ### Variables
 
-One rather annoying limitation of the Casio language is that variable names may only be a single character long. Here is what they all mean.
+One annoying limitation of the Casio language is that variable names can only be a single character long. Here is what they all mean.
 
 |Letter|Meaning|
 |------|-------|
