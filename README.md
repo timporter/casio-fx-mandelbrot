@@ -21,7 +21,7 @@ Before each draw some parameters are briefly displayed (current screen position 
 
 ### Controls
 
-For each draw the screenis blanked and the image is rendered to the screen as it is processed. Additionally, the top row of pixes is shaded in like a progress bar as drawing progresses left to right over the screen. This is useful to indicate progress if there is otherwise nothing being drawn in that part of the screen. After the draw is complete the progress bar is removed and the program is awaiting the next key press.
+For each draw the screen is blanked and the image is rendered to the screen as it is processed. Additionally, the top row of pixes is shaded in like a progress bar as drawing progresses left to right over the screen. This is useful to indicate progress if there is otherwise nothing to draw in that part of the screen. After the draw is complete the progress bar is removed and the program is awaiting the next key press.
 
 Note that the 'busy' indicator (small square at top right of screen) will always be present even when the drawing has stopped and key press is being awaited.
 
@@ -60,7 +60,7 @@ The Mandelbrot specific code itself is the most indented part of the code and ca
 
 ## Performance and accuracy
 
-The performance of code depends highly on the ammount of accuracy required to draw each image, the accuracy is determined by the cap on the number of iterations performed for each point. See about half way down [Renato Fonsecas Mandelbrot Page](http://renatofonseca.net/mandelbrotset.php) for examples of the difference this makes. In this implementation I draw the initial view with a cap of 25 iterations, and increase this cap by 5 each time a zoom is performed (or -5 when zooming out).
+The performance of the code depends highly on the amount of accuracy required to draw each image, the accuracy is determined by the cap on the number of iterations performed for each point. See about half way down [Renato Fonsecas Mandelbrot Page](http://renatofonseca.net/mandelbrotset.php) for examples of the difference this makes. In this implementation I draw the initial view with a cap of 25 iterations, and increase this cap by 5 each time a zoom is performed (or -5 when zooming out).
 
 Due to this, in general, each image will take longer to draw the further you zoom in. However, due to the fact that the main loop escapes early for light sections and dark sections require the full max iteration count, the draw time will be significantly faster where there is more light space than dark, such as around the edges of the main pattern rather than the middle.
 
@@ -220,7 +220,7 @@ ViewWindow 10,100,0,10,100,0    # Sets the view to any area that won't have main
 While 1
 	Cls
   
-  # Display the current view coordinates on the screen briefly before drawing
+ 	# Display the current view coordinates on the screen briefly before drawing
   	# 19 Spaces after the = sign (Press SHIFT, A-Lock (ALPHA), and then 19 times press SPACE (.))
 	Locate 1,1,"T=                   "
 	Locate 3,1,T
@@ -233,7 +233,7 @@ While 1
 	Locate 1,5,"S=                   "
 	Locate 3,5,S
   
-  # The is no sleep function so just spin for a little moment
+ 	# There is no sleep function so just spin for a little moment
 	For 1→W To 500
 	Next
   
