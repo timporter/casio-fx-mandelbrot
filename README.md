@@ -33,6 +33,7 @@ Note that the 'busy' indicator (small square at top right of screen) will always
 |------|-----|
 |Casio fx-9860GII|No issues|
 |Casio fx-9860GII SD (via emulator)|No issues|
+|Casio fx-9750GII (via emulator)|No issues|
 
 If you test this on additional devices please let me know if it works or not, via GitHub issue or PR to this document. If different model calculators have different size screens the most likely issue is that you are going to get an `AgumentError` when the code tries to plot outside the screen range, adjust the `M` and `O` values near the start of the code to account for this.
 
