@@ -92,6 +92,10 @@ All performance times below are on a real-world (not emulated) fx-9860GII. Image
 
 ## Code
 
+### Download
+
+[MANDEL.G1M](MANDEL.G1M)
+
 ### Notes on formatting
 
 You're going to have to type this in to the calculator in the program editor and save it.
