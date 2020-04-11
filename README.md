@@ -92,11 +92,15 @@ All performance times below are on a real-world (not emulated) fx-9860GII. Image
 
 ## Code
 
+If you have the cables and PC software then you can try the download. Otherwise you're going to have to key this in manually.
+
 ### Download
 
 [MANDEL.G1M](MANDEL.G1M?raw=true)
 
-### Notes on formatting
+### Manual entry
+
+#### Notes on formatting
 
 You're going to have to type this in to the calculator in the program editor and save it.
 
@@ -106,23 +110,23 @@ I've indented some of the lines to aid readability, like with comments there is 
 
 When starting a new line on the calculator the calculator will display the carriage return symbol (`↲`), this is ommitted in the code listing below.
 
-### Built-in symbols and tokens used
+#### Built-in symbols and tokens used
 
 Calculator built-in function names MUST be typed by pressing the button for the relevant function, not just keying the whole thing with the alpha buttons.
 
 Here are the locations of the tokens used in the menu of an FX-9860GII , other models may have different locations.
 
-#### Symbols
+##### Symbols
 
 `→` = The assignment operator, bottom-right most of the dark keys
 
 `i` = Imaginary number symbol, NOT the I alpha character. Press `SHIFT`, `0`. Or `OPTN`, `F3 (CPLX)`, `F1 (i)`
 
-#### Maths
+##### Maths
 
 `Abs` = Return absolute value of input. Press `OPTN`, `F3 (CPLX)`, `F2 (Abs)`
 
-#### Conditionals
+##### Conditionals
 
 `If` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F1 (If)`
 
@@ -130,13 +134,13 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 
 `IfEnd` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F4 (I.End)`
 
-#### Comparators
+##### Comparators
 
 `=` = Press `SHIFT`, `.`. Or `SHIFT`, `PRGM (VARS)`, `F6`, `F3 (REL)`, `F1 (=)`
 
 `>` = Press `SHIFT`, `PRGM (VARS)`, `F6`, `F3 (REL)`, `F3 (>)`
 
-#### For loops
+##### For loops
 
 `For` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F1 (For)`
 
@@ -144,13 +148,13 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 
 `Next` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F4 (Next)`
 
-#### While loops
+##### While loops
 
 `While` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F6`, `F1 (Whle)`
 
 `WhileEnd` = Press `SHIFT`, `PRGM (VARS)`, `F1 (COM)`, `F6`, `F6`, `F2 (WEnd)`
 
-#### Display
+##### Display
 
 `Cls` = Clear screen. Press `SHIFT`, `F4 (SKTCH)`, `F1 (Cls)`
 
@@ -162,11 +166,11 @@ Here are the locations of the tokens used in the menu of an FX-9860GII , other m
 
 `ViewWindow` = Configure view window. Press `SHIFT`, `F3 (V.Win)`, `F1 (V.Win)`
 
-#### Key input
+##### Key input
 
 `GetKey` = Gives the key code of the lass keypress. Press `SHIFT`, `PRGM (VARS)`, `F6`, `F4 (I/O)`, `F2 (Gtky)`
 
-### Variables
+#### Variables
 
 One annoying limitation of the Casio language is that variable names can only be a single character long. Here is what they all mean.
 
@@ -195,7 +199,7 @@ One annoying limitation of the Casio language is that variable names can only be
 
 I avoided using the X and Y variables despite the fact that this would have made the code make more sense. Some drawing functions on the calculator change the X and Y variables as side effects.
 
-### Source
+#### Source
 
 ```
 ViewWindow 10,100,0,10,100,0    # Sets the view to any area that won't have main axis in it
