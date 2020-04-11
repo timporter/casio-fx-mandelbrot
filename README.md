@@ -28,7 +28,7 @@ Note that the 'busy' indicator (small square at top right of screen) will always
 |Key|Operation|
 |---|---------|
 |D-pad|Pan left/right/up/down|
-|1-9|Zoom into the corresponding section of the screen, arranged the same as keypad layout.<br>eg, 5 will zoom to the centre, 2 will zoom to the bottom middle and 7 will zoom to the top left)|
+|`7` `8` `9`<br>`4` `5` `6`<br>`1` `2` `3`|Zoom into the corresponding section of the screen, arranged the same as keypad layout.<br>eg, 5 will zoom to the centre, 2 will zoom to the bottom middle and 7 will zoom to the top left)|
 |`-` (subtract)|Zoom out|
 |Any other key|Force a re-draw of the current location.|
 
