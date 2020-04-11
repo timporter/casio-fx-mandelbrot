@@ -94,7 +94,7 @@ All performance times below are on a real-world (not emulated) fx-9860GII. Image
 
 ### Download
 
-[MANDEL.G1M](MANDEL.G1M)
+[MANDEL.G1M](MANDEL.G1M?raw=true)
 
 ### Notes on formatting
 
